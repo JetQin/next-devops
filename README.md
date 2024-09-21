@@ -1,6 +1,6 @@
-<a href="https://next-auth-roles-template.vercel.app">
-  <img alt="Next Template" src="public/_static/og.jpg">
-  <h1 align="center">Next Auth Roles Template</h1>
+<a href="#">
+  <img alt="iDevops tools next template" src="public/_static/images/light-preview.png">
+  <h1 align="center">iDevops tools</h1>
 </a>
 
 <p align="center">
@@ -8,14 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/miickasmt">
-    <img src="https://img.shields.io/twitter/follow/miickasmt?style=flat&label=miickasmt&logo=twitter&color=0bf&logoColor=fff" alt="Mickasmt Twitter follower count" />
-  </a>
-</p>
-
-<p align="center">
   <a href="#installation"><strong>Installation</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
+  <a href="#tech-stack--features"><strong>Frameworks + Features</strong></a> ·
   <a href="#author"><strong>Author</strong></a>
 </p>
 <br/>
@@ -25,12 +19,12 @@
 Clone & create this repo locally with the following command:
 
 ```bash
-npx create-next-app my-saas-project --example "https://github.com/mickasmt/next-auth-roles-template"
+npx create-next-app my-saas-project --example "https://github.com/JetQin/next-devops"
 ```
 
 Or, deploy with Vercel:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmickasmt%2Fnext-auth-roles-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjetqin%2Fnext-devops)
 
 ### Steps
 
@@ -44,6 +38,8 @@ pnpm install
 
 ```sh
 cp .env.example .env.local
+npx auth secrets
+
 ```
 
 3. Start the development server:
@@ -88,9 +84,6 @@ pnpm run remove-content --docs
 >
 > Use this command for update your project: `ncu -i --format group`
 
-## Tech Stack + Features
-
-<img alt="Next Auth Roles Template" src="public/_static/images/x-preview.jpg">
 
 ### Frameworks
 
@@ -135,10 +128,8 @@ pnpm run remove-content --docs
 
 ## Author
 
-This project is based on [Next SaaS Stripe Starter](https://next-saas-stripe-starter.vercel.app/).
-
-Created by [@miickasmt](https://twitter.com/miickasmt) in 2023, released under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+This project is based on [Next](https://next-auth-roles-template.vercel.app).
+Developed by [@jetqin](https://github.com/jetqin) in 2024.
 
 ## Credits
-
-Thanks to [Hosna Qasmei](https://twitter.com/hqasmei) for part of the dashboard sidebar code.
+Thanks to [@miickasmt](https://twitter.com/miickasmt) which is the original author of this project.

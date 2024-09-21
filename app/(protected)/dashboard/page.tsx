@@ -34,7 +34,7 @@ export default async function DashboardPage() {
         // text={`Current Role : ${user?.role} — Change your role in settings.`}
       />
       <div className="hidden flex-col md:flex">
-        <div className="flex-1 space-y-0 px-8">
+        <div className="flex-1 space-y-0">
           <div className="flex items-center justify-end">
             <div className="flex items-center space-x-2">
               <CalendarDateRangePicker />
@@ -50,7 +50,7 @@ export default async function DashboardPage() {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Total Revenue
+                      Total Repos
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +75,7 @@ export default async function DashboardPage() {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Subscriptions
+                      Scanned Repos
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ export default async function DashboardPage() {
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                    <CardTitle className="text-sm font-medium">Completed</CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -126,7 +126,7 @@ export default async function DashboardPage() {
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
-                      Active Now
+                      Active Scanning
                     </CardTitle>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -160,7 +160,7 @@ export default async function DashboardPage() {
                 </Card>
                 <Card className="col-span-3">
                   <CardHeader>
-                    <CardTitle>Recent Sales</CardTitle>
+                    <CardTitle>Recent Scans</CardTitle>
                     <CardDescription>
                       You made 265 sales this month.
                     </CardDescription>

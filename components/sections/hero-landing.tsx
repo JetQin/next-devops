@@ -17,18 +17,18 @@ export default async function HeroLanding() {
           )}
           target="_blank"
         >
-          <span className="mr-3">🎉</span> Free Next SaaS Starter Here!
+          <span className="mr-3">🎉</span> Awesome devops tools!
         </Link>
 
         <h1 className="text-balance font-satoshi text-[40px] font-black leading-[1.15] tracking-tight sm:text-5xl md:text-6xl md:leading-[1.15]">
-          Next.js Template with{" "}
+          iDevops tools help you fix security issues{" "}
           <span className="bg-gradient-to-r from-violet-600 via-blue-600 to-cyan-500 bg-clip-text text-transparent">
-            Auth & User Roles!
+            More Secure!
           </span>
         </h1>
 
         <p className="max-w-2xl text-balance text-muted-foreground sm:text-lg">
-          Minimalist. Sturdy. <b>Open Source</b>. <br /> Focus on your own idea
+          <b>Open Source</b>. <br /> Focus on your own idea
           and... Nothing else!
         </p>
 
@@ -45,7 +45,7 @@ export default async function HeroLanding() {
             <Icons.arrowRight className="size-4" />
           </Link>
           <Link
-            href="https://github.com/mickasmt/next-auth-roles-template"
+            href="https://github.com/JetQin/next-devops"
             target="_blank"
             rel="noreferrer"
             className={cn(
