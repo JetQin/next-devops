@@ -27,21 +27,16 @@ export default function CodeEditorChatPage({ code, readOnly = false }: CodeEdito
     { role: 'assistant', content: "Hello! I'm your coding assistant. How can I help you today?" }
   ])
   const [inputMessage, setInputMessage] = useState('')
-  const [codeContent, setCodeContent] = useState(`function calculateSum(a, b) {
-  return a + b;
-}
-
-// TODO: Implement multiplication function
+  const [codeContent, setCodeContent] = useState(`import os
+os.system('ping -n %4' %p)
 `)
 
 
-  const copilotSuggestions = `function multiplyNumbers(a, b) {
-  return a * b;
-}
-
-// Example usage:
-const result = multiplyNumbers(5, 3);
-console.log(result); // Output: 15`
+  const copilotSuggestions = `import os
+cmd = 'ping -n 4 %s' %shlex.quote(ip)
+flag = subprocess.run(cmd, shell=False, stdout=subprocess.PIPE)
+stdout = flag.stdout
+  `
 
   const handleSendMessage = () => {
     if (inputMessage.trim()) {
@@ -81,7 +76,7 @@ console.log(result); // Output: 15`
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Suggestions Fix</h1>
+      <h1 className="text-2xl font-bold mb-4">Fix Suggestions</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardHeader>
@@ -90,7 +85,7 @@ console.log(result); // Output: 15`
           <CardContent className="h-[400px]">
             <MonacoEditor
                 height="100%"
-                defaultLanguage="javascript"
+                defaultLanguage="python"
                 value={codeContent}
                 options={{
                     readOnly,

@@ -17,7 +17,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
+import {useRouter} from "next/navigation"
 import { labels } from "../data/data"
 import { taskSchema } from "../data/schema"
 
@@ -29,6 +29,12 @@ export function DataTableRowActions<TData>({
   row,
 }: DataTableRowActionsProps<TData>) {
   const task = taskSchema.parse(row.original)
+  const router = useRouter()
+
+  const handleSuggest = () => {
+    console.log("handle suggestions!");
+    router.push("/dashboard/editor");
+  }
 
   return (
     <DropdownMenu>
@@ -42,9 +48,7 @@ export function DataTableRowActions<TData>({
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
-        <DropdownMenuItem>Edit</DropdownMenuItem>
-        <DropdownMenuItem>Make a copy</DropdownMenuItem>
-        <DropdownMenuItem>Favorite</DropdownMenuItem>
+        <DropdownMenuItem onClick={handleSuggest}>Suggestions</DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>Labels</DropdownMenuSubTrigger>
