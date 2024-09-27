@@ -12,7 +12,7 @@
     "react/jsx-key": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "error",
-    "eslint-plugin-tailwindcss": "3.14.0"
+    "eslint-plugin-tailwindcss": "0"
   },
   "settings": {
     "tailwindcss": {
