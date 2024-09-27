@@ -34,9 +34,10 @@ os.system('ping -n %4' %p)
 
   const copilotSuggestions = `import os
 cmd = 'ping -n 4 %s' %shlex.quote(ip)
-flag = subprocess.run(cmd, shell=False, stdout=subprocess.PIPE)
+flag = subprocess.run(cmd, shell=False, 
+                      stdout=subprocess.PIPE)
 stdout = flag.stdout
-  `
+`
 
   const handleSendMessage = () => {
     if (inputMessage.trim()) {
@@ -85,7 +86,7 @@ stdout = flag.stdout
           <CardContent className="h-[400px]">
             <MonacoEditor
                 height="100%"
-                defaultLanguage="python"
+                defaultLanguage="typescript"
                 value={codeContent}
                 options={{
                     readOnly,
