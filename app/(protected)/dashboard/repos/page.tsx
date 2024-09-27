@@ -1,17 +1,14 @@
+// "use client";
+
 import { promises as fs } from "fs"
 import path from "path"
-import { Metadata } from "next"
-import Image from "next/image"
 import { z } from "zod"
 
 import { columns } from "./components/columns"
 import { DataTable } from "./components/data-table"
 import { taskSchema } from "./data/schema"
+import { useEffect, useState } from "react"
 
-export const metadata: Metadata = {
-  title: "Tasks",
-  description: "A task and issue tracker build using Tanstack Table.",
-}
 
 // Simulate a database read for tasks.
 async function getTasks() {
@@ -26,6 +23,25 @@ async function getTasks() {
 
 export default async function TaskPage() {
   const tasks = await getTasks()
+  // const [tasks, setTasks] = useState([])
+
+  // useEffect(() => {
+  //   fetch('/api/repos', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ owner: "JetQin", repo: "next-devops" }),
+  //     })
+  //     .then((res) => {
+  //       console.log(res);
+  //       return res;
+  //     })
+  //     .then((data) => {
+  //       // setTasks(data)
+  //       console.log(data);
+  //     })
+  // }, [])
 
   return (
     <>
