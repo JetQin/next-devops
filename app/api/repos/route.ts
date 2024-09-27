@@ -1,6 +1,5 @@
 
 import { Octokit } from "octokit";
-// import { NextRequest, NextResponse } from 'next/server';
 import { NextApiRequest, NextApiResponse } from "next/types";
 
 const octokit = new Octokit({
