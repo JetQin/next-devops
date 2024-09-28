@@ -27,15 +27,22 @@ import {
 
 import { DataTablePagination } from "./data-table-pagination"
 import { DataTableToolbar } from "./data-table-toolbar"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
+  loading: boolean
+  handleScan(owner: string, repo: string): void;
+  handleRefresh(owner: string, repo: string): void;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  loading,
+  handleScan,
+  handleRefresh
 }: DataTableProps<TData, TValue>) {
   const [rowSelection, setRowSelection] = React.useState({})
   const [columnVisibility, setColumnVisibility] =
@@ -69,7 +76,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className="space-y-4">
-      <DataTableToolbar table={table} />
+      <DataTableToolbar table={table} handleScan={handleScan} handleRefresh={handleRefresh}/>
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -90,7 +97,8 @@ export function DataTable<TData, TValue>({
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody>
+          {loading ? <Skeleton className="size-full rounded-lg" /> :
+            <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
@@ -118,6 +126,8 @@ export function DataTable<TData, TValue>({
               </TableRow>
             )}
           </TableBody>
+          }
+          
         </Table>
       </div>
       <DataTablePagination table={table} />

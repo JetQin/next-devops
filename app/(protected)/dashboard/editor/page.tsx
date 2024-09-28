@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { SendIcon, CopyIcon, CheckIcon } from 'lucide-react'
 import { useToast } from "@/components/ui/use-toast"
 import dynamic from 'next/dynamic';
+import { boolean } from 'zod';
 
 interface CodeEditorProps {
     code: string;
@@ -21,7 +22,7 @@ const MonacoEditor = dynamic(
 );
 
 
-export default function CodeEditorChatPage({ code, readOnly = false }: CodeEditorProps) {
+export default function CodeEditorChatPage() {
   const { toast } = useToast()
   const [chatMessages, setChatMessages] = useState<Array<{ role: 'user' | 'assistant', content: string }>>([
     { role: 'assistant', content: "Hello! I'm your coding assistant. How can I help you today?" }
@@ -89,7 +90,7 @@ stdout = flag.stdout
                 defaultLanguage="typescript"
                 value={codeContent}
                 options={{
-                    readOnly,
+                    readOnly: false,
                     minimap: { enabled: false },
                     scrollBeyondLastLine: false,
                 }}
