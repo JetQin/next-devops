@@ -28,7 +28,9 @@ export default function TaskPage() {
         title: alert.security_advisory.summary || '',
         status: alert.state || '',
         label: alert.security_advisory.cve_id || '',
-        priority: alert.security_advisory.severity
+        priority: alert.security_advisory.severity,
+        owner: owner,
+        repo: repo
       }));
       setTasks(newTasks);
       setLoading(false);

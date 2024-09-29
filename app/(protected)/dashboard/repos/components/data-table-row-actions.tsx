@@ -33,7 +33,7 @@ export function DataTableRowActions<TData>({
 
   const handleSuggest = () => {
     console.log("handle suggestions!");
-    router.push("/dashboard/editor");
+    router.push("/dashboard/chat?alert_number="+task.id+"&owner="+task.owner+"&repo="+task.repo);
   }
 
   return (
