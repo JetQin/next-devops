@@ -4,7 +4,7 @@
 </a>
 
 <p align="center">
-  Start at full speed with this Next.js Template ! Updated version 1.0.0
+  Start at full speed with this Next.js Template ! Updated version 1.0.1
 </p>
 
 <p align="center">
