@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { toast } from 'react-hot-toast'
-import { useChat } from 'ai/react';
+import { Message, useChat } from 'ai/react';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
@@ -65,7 +65,7 @@ export default function V0Clone() {
         
     }, [searchParams])
 
-    const UserMessage = ({ message }) => {
+    const UserMessage = (message: Message) => {
         return (
             <div key={message.id} className="flex px-2 py-4 sm:px-4">
                 <img className="mr-2 flex h-8 w-8 rounded-full sm:mr-4"  src="https://dummyimage.com/256x256/363536/ffffff&text=U" />
@@ -77,7 +77,7 @@ export default function V0Clone() {
         )
     }
 
-    const SystemMessage = (message)  => {
+    const SystemMessage = (message: Message)  => {
         return (
             <>
                 <div className="mb-2 flex w-full flex-row justify-end gap-x-2 text-slate-500">
