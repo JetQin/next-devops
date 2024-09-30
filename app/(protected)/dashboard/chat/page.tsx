@@ -115,7 +115,7 @@ export default function V0Clone() {
 
 
     return (
-        <div className="flex h-screen bg-gray-100 font-sans">
+        <div className="flex h-5/6 bg-gray-100 font-sans  bottom-2.5">
             <div className="w-1/2 bg-gray-900">
                 <MonacoEditor
                 height="100%"
@@ -136,7 +136,7 @@ export default function V0Clone() {
             
             {/* Chat Panel and Chatbox */}
             <div className="w-1/2 flex flex-col">
-                <div className="flex flex-col h-screen bg-background">
+                <div className="flex flex-col h-screen bg-background bottom-2.5">
                     <ScrollArea className="flex-grow p-4">
                         {messages.map(message => {
                             if(message.role == "user"){
