@@ -60,10 +60,10 @@ export default function V0Clone() {
           })
           .then((res) => res.json())
           .then((alert) => {
-                setCode(alert);
+            setCode(JSON.stringify(alert));
           })
         
-    }, [searchParams])
+    }, [])
 
     const UserMessage = (message: Message) => {
         return (
@@ -119,7 +119,7 @@ export default function V0Clone() {
             <div className="w-1/2 bg-gray-900">
                 <MonacoEditor
                 height="100%"
-                language="javascript"
+                language="yaml"
                 theme="vs-light"
                 value={code}
                 onChange={handleEditorChange}

@@ -9,7 +9,7 @@ async function getDependantAlerts(owner:string, repo:string, alert_number?: numb
     try {
         let dependabotUrl = ""
         if(alert_number){
-            dependabotUrl = 'GET /repos/{owner}/{repo}/dependabot/{alert_number}'
+            dependabotUrl = 'GET /repos/{owner}/{repo}/dependabot/alerts/{alert_number}'
         }else{
             dependabotUrl = 'GET /repos/{owner}/{repo}/dependabot/alerts'
         }
